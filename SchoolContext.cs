@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using TP1_EF.Dto;
 using TP1_EF.models;
 
 namespace TP1_EF
@@ -13,6 +14,10 @@ namespace TP1_EF
         public DbSet<Class> Classes { get; set; }
         public DbSet<Enrollment> Enrollments { get; set; }
 
+        // Mapped for SQL view and stored procedure
+        public DbSet<TeacherSubjectViewModel> V_Teacher_Subject { get; set; }
+        public DbSet<StudentDto> StudentDto { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var config = new ConfigurationBuilder()
@@ -22,14 +27,19 @@ namespace TP1_EF
             optionsBuilder.UseSqlServer(config.GetConnectionString("DefaultConnection"));
         }
 
-
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Mapping Fluent API from separate classes
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(SchoolContext).Assembly);
+
+            // Mapping view
+            modelBuilder.Entity<TeacherSubjectViewModel>()
+                .HasNoKey()
+                .ToView("V_Teacher_Subject");
+
+            // Mapping stored procedure result (no key, no table)
+            modelBuilder.Entity<StudentDto>()
+                .HasNoKey();
         }
-
-
-
     }
 }

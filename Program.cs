@@ -9,6 +9,7 @@ namespace TP1_EF
     {
         static void Main(string[] args)
         {
+            /*
             //without DI
 
             /* using var context = new SchoolContext();
@@ -28,7 +29,7 @@ namespace TP1_EF
             var context = container.GetInstance<SchoolContext>();
 
             //CREATE
-            var newStudent = new Student
+           /* var newStudent = new Student
             {
                 FirstName = "Reda",
                 LastName = "Ziyani",
@@ -39,7 +40,7 @@ namespace TP1_EF
             context.SaveChanges(); // 👈 always save to persist
 
             Console.WriteLine(" Étudiant ajouté.");
-
+           */
             //READ
             var students = studentRepo.GetAll();
 
@@ -56,6 +57,8 @@ namespace TP1_EF
             }
 
             //UPDATE
+            //
+            /*
             var studentToUpdate = studentRepo.GetById(newStudent.Id);
             if (studentToUpdate != null)
             {
@@ -63,7 +66,8 @@ namespace TP1_EF
                 studentRepo.Update(studentToUpdate);
                 context.SaveChanges();
                 Console.WriteLine($" Étudiant ID {studentToUpdate.Id} mis à jour.");
-            }
+            }*
+            /
 
             //DELETE
             /*var studentToDelete = studentRepo.GetById(newStudent.Id);
@@ -72,11 +76,26 @@ namespace TP1_EF
                 studentRepo.Remove(studentToDelete);
                 context.SaveChanges();
                 Console.WriteLine($" Étudiant ID {studentToDelete.Id} supprimé.");
-            }*/
+            }
             foreach (var student in students)
             {
                 Console.WriteLine($"{student.Id} - {student.FirstName} {student.LastName}");
             }
+            */
+            //
+            Console.WriteLine(" VIEW TESTING ");
+            string studentNumber = "STU1002";
+            var student2 = context.StudentDto
+     .FromSqlInterpolated($"EXEC GetStudentByStudentNumber {studentNumber}")
+     .AsEnumerable()
+     .FirstOrDefault();
+
+            if (student2 != null)
+            {
+                Console.WriteLine($" {student2.FirstName} {student2.LastName} ({student2.StudentNumber})");
+            }
+
+
         }
     }
 }
