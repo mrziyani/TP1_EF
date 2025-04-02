@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7FfQgOaz0SU=",
+  "dgSpecHash": "yTdMbdWbGEw=",
   "success": true,
   "projectFilePath": "C:\\Users\\rziyani\\source\\repos\\TP1_EF\\TP1_EF\\TP1_EF.csproj",
   "expectedPackageFiles": [
@@ -55,9 +55,11 @@
     "C:\\Users\\rziyani\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\rziyani\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\rziyani\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
+    "C:\\Users\\rziyani\\.nuget\\packages\\simpleinjector\\5.5.0\\simpleinjector.5.5.0.nupkg.sha512",
     "C:\\Users\\rziyani\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
     "C:\\Users\\rziyani\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
     "C:\\Users\\rziyani\\.nuget\\packages\\system.collections.immutable\\7.0.0\\system.collections.immutable.7.0.0.nupkg.sha512",
+    "C:\\Users\\rziyani\\.nuget\\packages\\system.componentmodel\\4.0.1\\system.componentmodel.4.0.1.nupkg.sha512",
     "C:\\Users\\rziyani\\.nuget\\packages\\system.composition\\7.0.0\\system.composition.7.0.0.nupkg.sha512",
     "C:\\Users\\rziyani\\.nuget\\packages\\system.composition.attributedmodel\\7.0.0\\system.composition.attributedmodel.7.0.0.nupkg.sha512",
     "C:\\Users\\rziyani\\.nuget\\packages\\system.composition.convention\\7.0.0\\system.composition.convention.7.0.0.nupkg.sha512",

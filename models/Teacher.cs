@@ -12,6 +12,7 @@ namespace TP1_EF.models
         public DateTime HireDate { get; set; }
         public int SubjectId { get; set; }
         public Subject Subject { get; set; }
+        public int test { get; set; }
         public ICollection<Class> Classes { get; set; }
     }
 }

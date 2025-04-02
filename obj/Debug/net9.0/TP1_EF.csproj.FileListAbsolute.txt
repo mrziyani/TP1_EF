@@ -154,3 +154,4 @@ C:\Users\rziyani\source\repos\TP1_EF\TP1_EF\obj\Debug\net9.0\TP1_EF.genruntimeco
 C:\Users\rziyani\source\repos\TP1_EF\TP1_EF\obj\Debug\net9.0\ref\TP1_EF.dll
 C:\Users\rziyani\source\repos\TP1_EF\TP1_EF\bin\Debug\net9.0\appsettings.json
 C:\Users\rziyani\source\repos\TP1_EF\TP1_EF\obj\Debug\net9.0\TP1_EF.sourcelink.json
+C:\Users\rziyani\source\repos\TP1_EF\TP1_EF\bin\Debug\net9.0\SimpleInjector.dll
